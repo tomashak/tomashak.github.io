@@ -43,8 +43,8 @@ plugins:
   - jekyll-avatar
   - jekyll-remote-theme
   - jekyll-mentions
-#sass:
-#  style: compressed
+sass:
+  style: compressed
 
 exclude:
 - "*.gemspec"
