@@ -29,6 +29,20 @@ socials:
 # build settings
 markdown: kramdown
 theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-avatar
+  - jekyll-remote-theme
+  - jekyll-mentions
 #sass:
 #  style: compressed
 
