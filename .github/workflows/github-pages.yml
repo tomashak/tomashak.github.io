@@ -33,4 +33,4 @@ jobs:
             -v ${{ github.workspace }}/vendor/bundle:/usr/local/bundle \
             -e JEKYLL_PAT=${{ secrets.JEKYLL_PAT }} \
             jekyll/jekyll:latest \
-            bash -c "cd _site && git config --global --add safe.directory /srv/jekyll/_site && git init && git remote add origin https://x-access-token:${{ secrets.JEKYLL_PAT }}@github.com/${{ github.repository }}.git && git checkout -b gh-pages && git add . && git commit -m 'Deploy' && git push origin gh-pages --force"
+            bash -c "cd _site && git config --global --add safe.directory /srv/jekyll/_site && git config --global user.email 'tomas.hak@gmail.com' && git config --global user.name 'Tomas Hak' && git init && git remote add origin https://x-access-token:${{ secrets.JEKYLL_PAT }}@github.com/${{ github.repository }}.git && git checkout -b gh-pages && git add . && git commit -m 'Deploy' && git push origin gh-pages --force"
