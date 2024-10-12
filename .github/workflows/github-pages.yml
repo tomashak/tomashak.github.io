@@ -18,8 +18,6 @@ jobs:
         run: gem install bundler:2.5.21
       - name: Install dependencies
         run: bundle install
-      - name: Set permissions
-        run: sudo chown -R $USER:$USER ${{ github.workspace }}
       - name: Build and Deploy
         run: |
           docker run \
@@ -27,7 +25,7 @@ jobs:
             -v ${{ github.workspace }}/vendor/bundle:/usr/local/bundle \
             -e JEKYLL_PAT=${{ secrets.JEKYLL_PAT }} \
             jekyll/jekyll:latest \
-            jekyll build
+            bash -c "chown -R jekyll:jekyll /srv/jekyll && jekyll build"
           docker run \
             -v ${{ github.workspace }}:/srv/jekyll \
             -v ${{ github.workspace }}/vendor/bundle:/usr/local/bundle \
