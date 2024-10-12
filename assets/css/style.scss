@@ -1,8 +1,8 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/skel';
-@import 'font-awesome.min.css';
+@import 'libs/_vars';
+@import 'libs/_functions';
+@import 'libs/_mixins';
+@import 'libs/_skel';
+@import '_font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
 
 /*
@@ -50,29 +50,29 @@
 
 // Base.
 
-	@import 'base/page';
-	@import 'base/typography';
+	@import 'base/_page';
+	@import 'base/_typography';
 
 // Component.
 
-	@import 'components/section';
-	@import 'components/form';
-	@import 'components/box';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
-	@import 'components/table';
-	@import 'components/button';
-	@import 'components/tiles';
-	@import 'components/contact-method';
-	@import 'components/spotlights';
+	@import 'components/_section';
+	@import 'components/_form';
+	@import 'components/_box';
+	@import 'components/_icon';
+	@import 'components/_image';
+	@import 'components/_list';
+	@import 'components/_table';
+	@import 'components/_button';
+	@import 'components/_tiles';
+	@import 'components/_contact-method';
+	@import 'components/_spotlights';
 
 // Layout.
 
-	@import 'layout/header';
-	@import 'layout/banner';
-	@import 'layout/main';
-	@import 'layout/contact';
-	@import 'layout/footer';
-	@import 'layout/wrapper';
-	@import 'layout/menu';
+	@import 'layout/_header';
+	@import 'layout/_banner';
+	@import 'layout/_main';
+	@import 'layout/_contact';
+	@import 'layout/_footer';
+	@import 'layout/_wrapper';
+	@import 'layout/_menu';
