@@ -16,6 +16,8 @@ jobs:
           ruby-version: 3.0
       - name: Install Bundler
         run: gem install bundler:2.5.21
+      - name: Install jekyll-sass-converter
+        run: gem install jekyll-sass-converter -v 2.1.0
       - name: Install dependencies
         run: bundle install
       - name: Build and Deploy
@@ -25,7 +27,7 @@ jobs:
             -v ${{ github.workspace }}/vendor/bundle:/usr/local/bundle \
             -e JEKYLL_PAT=${{ secrets.JEKYLL_PAT }} \
             jekyll/jekyll:latest \
-            bash -c "chown -R jekyll:jekyll /srv/jekyll && jekyll build"
+            bash -c "chown -R jekyll:jekyll /srv/jekyll && jekyll build --trace"
           docker run \
             -v ${{ github.workspace }}:/srv/jekyll \
             -v ${{ github.workspace }}/vendor/bundle:/usr/local/bundle \
