@@ -28,9 +28,9 @@ socials:
 
 # build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
-sass:
-  style: compressed
+theme: minima
+#sass:
+#  style: compressed
 
 exclude:
 - "*.gemspec"
