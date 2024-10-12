@@ -23,9 +23,7 @@ jobs:
           bundle exec jekyll build --trace
           git config --global --add safe.directory ${{ github.workspace }}
           git config --global user.email 'tomas.hak@gmail.com'
-          git config --global user.name 'Tomas Hak'
-          git init
-          git remote add origin https://x-access-token:${{ secrets.JEKYLL_PAT }}@github.com/${{ github.repository }}.git
+          git config --global user.name 'Tomas Hak'          
           git checkout -b gh-pages
           git add .
           git commit -m 'Deploy'
