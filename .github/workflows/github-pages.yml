@@ -24,4 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.JEKYLL_PAT }}
-          publish_dir: ./public
+          publish_dir: ./_site
