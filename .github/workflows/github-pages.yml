@@ -10,10 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Update RubyGems using apt-get
-        run: sudo apt-get update && sudo apt-get install -y rubygems
-      - name: Update RubyGems
-        run: gem update --system
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+      - name: Install Bundler
+        run: gem install bundler
+      - name: Install dependencies
+        run: bundle install
       - uses: helaili/jekyll-action@2.0.5
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
