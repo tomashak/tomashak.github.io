@@ -6,5 +6,4 @@ group :jekyll_plugins do
   gem 'jekyll-timeago', '~> 0.13.1'
 end
 gem "jekyll-theme-cayman"
-gem "jekyll-feed"
-gem "jekyll-seo-tag"
+
