@@ -16,10 +16,6 @@ jobs:
           ruby-version: 3.0
       - name: Install Bundler
         run: gem install bundler:2.5.21
-      - name: Install jekyll-sass-converter
-        run: gem install jekyll-sass-converter -v 2.1.0
-      - name: Install minima theme
-        run: gem install minima
       - name: Install dependencies
         run: bundle install
       - name: Build and Deploy
