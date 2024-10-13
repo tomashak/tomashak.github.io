@@ -3,9 +3,7 @@ title: Tomáš Hák
 subtitle: personal website
 description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
 url: "https://tomashak.github.io" # the base hostname & protocol for your site
-# homepage tiles
-tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 6
+
 
 socials:
   GitHub: https://github.com/tomashak  
