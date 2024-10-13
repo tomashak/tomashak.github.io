@@ -1,25 +1,31 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  github-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
-      - name: Install Bundler
-        run: gem install bundler:2.5.21
+          ruby-version: 2.7
+
       - name: Install dependencies
-        run: bundle install
-      - name: Build site
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
         run: bundle exec jekyll build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
