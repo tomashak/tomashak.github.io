@@ -17,6 +17,7 @@ markdown: kramdown
 theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
+theme: chirpy
 permalink: pretty
 
 # Minimal Mistakes settings
