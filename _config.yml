@@ -16,5 +16,12 @@ socials:
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-feed
 permalink: pretty
+
+# Minimal Mistakes settings
+minimal_mistakes_skin: "air"
+header:
+  image: "assets/images/header.jpg"
