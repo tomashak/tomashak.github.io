@@ -24,55 +24,65 @@
 
 
 
-<div class="row">
+<article class="px-1">
+  <header>
+    <h1 data-toc-skip>Sample Post</h1>
+    
 
-  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
-
-    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-
-      <h1 data-toc-skip>Sample Post</h1>
-
-      <div class="post-meta text-muted d-flex flex-column">
-        <!-- Published date and author -->
-        <div>
-          <span class="semi-bold">
-            your_full_name
-          </span>
-          
-          <!--
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
   Date format snippet
-  See: /assets/js/_utils/timeage.js
+  See: ${JS_ROOT}/utils/locale-dateime.js
 -->
 
 
 
 
-
-
-  on
-
-<span class="timeago "
+<time
   
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Oct  1, 2023, 12:00 AM +0000"
-  >Oct  1, 2023<i class="unloaded">2023-10-01T00:00:00+00:00</i>
-</span>
+  data-ts="1696118400"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Oct  1, 2023
+</time>
 
-        </div>
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              <a href=""></a>
+            
+          </em>
+        </span>
 
         <div>
-          <!-- lastmod -->
+          <!-- pageviews -->
           
 
           <!-- read time -->
-          <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
-<!-- words per minute  -->
+<!-- words per minute -->
 
 
 
@@ -84,237 +94,79 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="5 words">1 min
-     read</span>
-
-
-          <!-- page views -->
-          
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="5 words"
+>
+  <em>1 min</em> read</span>
 
         </div>
+      </div>
+    </div>
+  </header>
 
-      </div> <!-- .post-meta -->
+  <div class="content">
+    <p>This is a sample post.</p>
 
-      <div class="post-content">
+  </div>
 
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+
+    <!-- tags -->
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
         
+          
 
-        <p>This is a sample post.</p>
-
-
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
       </div>
 
-      <div class="post-tail-wrapper text-muted">
+      <!-- Post sharing snippet -->
 
-        <!-- categories -->
-        
-
-        <!-- tags -->
-        
-
-        <div class="post-tail-bottom
-          d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
-          <div class="license-wrapper">
-          
-            
-            This post is licensed under 
-            <a href="https://creativecommons.org/licenses/by/4.0/">
-              CC BY 4.0
-            </a>
-             by the author.
-          
-          </div>
-
-          <!--
- Post sharing snippet
--->
-
-<div class="share-wrapper">
-  <span class="share-label text-muted mr-1">Share</span>
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
   <span class="share-icons">
     
     
-
-    
-      
-        <a href="https://twitter.com/intent/tweet?text=Sample Post - Tomáš Hák&url=https://tomashak.github.io/2023/10/01/sample-post/" data-toggle="tooltip" data-placement="top"
-          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
-          <i class="fa-fw fab fa-twitter"></i>
-        </a>
-    
-      
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Sample Post - Tomáš Hák&u=https://tomashak.github.io/2023/10/01/sample-post/" data-toggle="tooltip" data-placement="top"
-          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
-          <i class="fa-fw fab fa-facebook-square"></i>
-        </a>
-    
-      
-        <a href="https://telegram.me/share?text=Sample Post - Tomáš Hák&url=https://tomashak.github.io/2023/10/01/sample-post/" data-toggle="tooltip" data-placement="top"
-          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
-          <i class="fa-fw fab fa-telegram"></i>
-        </a>
     
 
-    <i id="copy-link" class="fa-fw fas fa-link small"
-        data-toggle="tooltip" data-placement="top"
-        title="Copy link"
-        title-succeed="Link copied successfully!">
-    </i>
+    
 
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
   </span>
 </div>
 
-
-        </div><!-- .post-tail-bottom -->
-
-      </div><!-- div.post-tail -->
-
-    </div> <!-- .post -->
-
-
-  </div> <!-- #post-wrapper -->
-
-  
-
-  
-
-  <!--
-  The Pannel on right side (Desktop views)
--->
-
-
-
-
-
-<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down">
-
-  <div class="access">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  </div> <!-- .access -->
-
-  
-
-</div> <!-- #panel-wrapper -->
-
-
-</div> <!-- .row -->
-
-<div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-
-    <!--
- Recommend the other 3 posts according to the tags and categories of the current post,
- if the number is not enough, use the other latest posts to supplement.
--->
-
-<!-- The total size of related posts  -->
-
-
-<!-- An random integer that bigger than 0  -->
-
-
-<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
-
-
-
-
-
-
-
-
-  
-
-  
-    
-
-
-
-
-
-
-<!-- Fill with the other newlest posts  -->
-
-
-
-
-  
-    
-    
-  
-
-
-
-
-
-
-
-    <!--
-  Navigation buttons at the bottom of the post.
--->
-
-<div class="post-navigation d-flex justify-content-between">
-  
-  <span class="btn btn-outline-primary disabled"
-    prompt="Older">
-    <p>-</p>
-  </span>
-  
-
-  
-  <span class="btn btn-outline-primary disabled"
-    prompt="Newer">
-    <p>-</p>
-  </span>
-  
-
-</div>
-
-
-    
-
-    </div> <!-- #post-extend-wrapper -->
-
-  </div> <!-- .col-* -->
-
-</div> <!-- .row -->
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
 
   </div>
   
