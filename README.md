@@ -1,9 +1,11 @@
-# Jekyll Project
+# Jekyll Gitbook Project
 
-This is a Jekyll project that utilizes GitHub Pages to host a static website. The project structure is as follows:
+This is a Jekyll Gitbook project that allows you to write articles in Markdown format and publish them using GitHub Pages with the Jekyll Gitbook theme.
+
+## Project Structure
 
 ```
-jekyll-project
+jekyll-gitbook-project
 ├── _config.yml
 ├── _posts
 │   └── 2023-10-01-sample-post.md
@@ -12,13 +14,8 @@ jekyll-project
 ├── _includes
 │   └── header.html
 ├── assets
-│   ├── css
-│   │   └── style.css
-│   └── js
-│       └── script.js
-├── .github
-│   └── workflows
-│       └── github-pages.yml
+│   └── css
+│       └── style.css
 ├── index.md
 └── README.md
 ```
@@ -27,38 +24,30 @@ jekyll-project
 
 ### `_config.yml`
 
-This file is the configuration file for the Jekyll site. It contains settings and options for the site, such as the site title, theme, and plugins.
+This file is the configuration file for Jekyll. It contains settings and options for the Jekyll site, such as the site title, theme, and plugins.
 
 ### `_posts/2023-10-01-sample-post.md`
 
-This file is a sample Markdown file that represents a blog post. It follows the naming convention `YYYY-MM-DD-title.md` and contains the content of the blog post.
+This file is a sample blog post written in Markdown format. You can create additional blog posts by adding Markdown files to the `_posts` directory with the format `YYYY-MM-DD-post-title.md`.
 
 ### `_layouts/default.html`
 
-This file is a layout template for the Jekyll site. It defines the structure and styling of the site's pages. Other pages can inherit from this layout and customize it as needed.
+This file is the default layout template for the Jekyll site. It defines the structure and styling of the site's pages. You can customize this file to change the overall look and feel of your site.
 
 ### `_includes/header.html`
 
-This file is an include file that contains the HTML code for the site's header. It can be included in multiple pages to maintain consistency.
+This file is an include file that contains the header section of the site. It can be included in the layout template or other pages to maintain consistency across the site.
 
 ### `assets/css/style.css`
 
-This file is a CSS file that contains the styles for the Jekyll site. It defines the visual appearance of the site, such as colors, fonts, and layout.
-
-### `assets/js/script.js`
-
-This file is a JavaScript file that contains the scripts for the Jekyll site. It adds interactivity and dynamic behavior to the site.
-
-### `.github/workflows/github-pages.yml`
-
-This file is a GitHub Actions workflow file. It defines a workflow that automatically deploys the Jekyll site to GitHub Pages whenever changes are pushed to the repository.
+This file is a CSS file that contains the styles for the site. You can customize this file to change the visual appearance of your site.
 
 ### `index.md`
 
-This file is the main Markdown file for the Jekyll site. It represents the homepage of the site and can contain content such as an introduction or summary.
+This file is the main page of the site. It can contain an introduction, links to blog posts, or any other content you want to display on the homepage.
 
 ### `README.md`
 
-This file contains the documentation for the project. It provides information about the project, its purpose, and how to set it up or contribute to it.
+This file contains the documentation for the project. You can provide instructions or additional information about the project in this file.
 
-Please note that this file is intentionally left blank.
+Feel free to modify and customize these files to suit your needs. Happy writing and publishing!
