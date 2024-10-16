@@ -1,0 +1,23 @@
+# Site settings
+title: Your Site Title
+description: Your site description
+theme: jekyll-theme-gitbook
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _site
+  - .git
