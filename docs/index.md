@@ -1,17 +1,38 @@
-# Welcome to MkDocs
+# About Me
+<img src="img/profil.jpg" alt="Profile Image" width="150px" style="float: left; margin-right: 20px;" />
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Tomáš Hák        
+Test automation specialist bez bázně a hany. Bud Spencer českého testingu. Když jsem byl malý, byl jsem namyšlený, ale teď už nemám chybu. ;-) Fight till the last bug. 
 
-## Commands
+## Contact
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **Email:** [tomas.hak@gmail.com](mailto:tomas.hak@gmail.com)
+- **LinkedIn:** [linkedin.com/in/haktom](https://www.linkedin.com/in/haktom)
+- **YouTube:** [youtube.com/@tesena](https://www.youtube.com/@tesena)        
 
-## Project layout
+## Links
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [GitHub](https://github.com/tomashak)
+- [Twitter](https://twitter.com/tomashak)
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
