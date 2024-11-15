@@ -1,0 +1,8 @@
+site_name: TomasHak Site
+site_description: an example blog set up following the tutorial
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+plugins:
+  - search
+  - blog
