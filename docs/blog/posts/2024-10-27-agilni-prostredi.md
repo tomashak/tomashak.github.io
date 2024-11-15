@@ -10,7 +10,7 @@ date:
 
 # Testing v agilním prostředí
 
-Článek původně publikován na Tesena blogu: [Testing v agilním prostředí](https://www.tesena.com/testing-v-agilnim-prostredi/a-390/) 
+Článek původně publikován na našem Tesena blogu: [Testing v agilním prostředí](https://www.tesena.com/testing-v-agilnim-prostredi/a-390/) 
 
 Přibývá projektů, které chtějí investovat do efektivnějšího testování a používají tak automatizované testy. V tomto článku se dozvíte, jak přistoupit k automatizaci databázových testů.
 Celá řada firem se v poslední době svezla na vlně a svůj vývoj přesunula z vodopádového modelu na agilní metodiky, nejčastěji Scrum či Kanban. Nebudeme zde hodnotit, zda-li to je dobře a co je lepší. Na toto téma existuje mnoho článků a videí, zmínil bych možná pro zajímavost záznam setkání pražských testerů, kde se uskutečnil pomyslný souboj obou přístupů a dres vodopádu tehdy cvičně oblékl i Marcel Veselka od nás z Teseny. Více informací naleznete [zde](https://www.pro-test.info/protest-75/).
