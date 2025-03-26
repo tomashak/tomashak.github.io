@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mydomain.org/mysite/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/2024/10/27/testing-v-agiln%C3%ADm-prost%C5%99ed%C3%AD/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/2025/03/30/pozn%C3%A1mky-aneb-v%C3%A1%C5%A1-druh%C3%BD-mozek/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/2023/10/01/n%C3%A1zev-%C4%8Dl%C3%A1nku/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/archive/2025/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/archive/2024/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/archive/2023/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+</urlset>

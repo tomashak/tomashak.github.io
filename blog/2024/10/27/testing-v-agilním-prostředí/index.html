@@ -1,0 +1,805 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="an example blog set up following the tutorial">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/blog/2024/10/27/testing-v-agiln%C3%ADm-prost%C5%99ed%C3%AD/">
+      
+      
+        <link rel="prev" href="../../../../2023/10/01/n%C3%A1zev-%C4%8Dl%C3%A1nku/">
+      
+      
+        <link rel="next" href="../../../../2025/03/30/pozn%C3%A1mky-aneb-v%C3%A1%C5%A1-druh%C3%BD-mozek/">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Testing v agilním prostředí - TomasHak Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#testing-v-agilnim-prostredi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="TomasHak Site" class="md-header__button md-logo" aria-label="TomasHak Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TomasHak Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Testing v agilním prostředí
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="TomasHak Site" class="md-nav__button md-logo" aria-label="TomasHak Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TomasHak Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Me
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog Rozcestník
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#par-slov-obecne-o-agilnim-vyvoji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pár slov obecně o agilním vývoji
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pár slov obecně o agilním vývoji">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zakladni-principy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Základní principy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ceremonie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ceremonie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ceremonie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#denni-status-take-se-pouziva-stand-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denní status (také se používá stand-up)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grooming-ve-volnem-prekladu-odblesovani" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grooming (ve volném překladu „odblešování“)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrospektiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrospektiva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-review-nekdy-tez-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint review (někdy též demo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#co-prinesl-agilni-vyvoj-pro-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co přinesl agilní vývoj pro testing?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Co přinesl agilní vývoj pro testing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-c-1-planovani" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problém č. 1 – Plánování
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-c-2-slozeni-tymu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problém č. 2 – Složení týmu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-c3-technicke-pristupy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problém č.3 – Technické přístupy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2024-10-27 00:00:00+00:00" class="md-ellipsis">October 27, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              11 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+<h1 id="testing-v-agilnim-prostredi">Testing v agilním prostředí</h1>
+<p>Článek původně publikován na našem Tesena blogu: <a href="https://www.tesena.com/testing-v-agilnim-prostredi/a-390/">Testing v agilním prostředí</a> </p>
+<p>Přibývá projektů, které chtějí investovat do efektivnějšího testování a používají tak automatizované testy. V tomto článku se dozvíte, jak přistoupit k automatizaci databázových testů.
+Celá řada firem se v poslední době svezla na vlně a svůj vývoj přesunula z vodopádového modelu na agilní metodiky, nejčastěji Scrum či Kanban. Nebudeme zde hodnotit, zda-li to je dobře a co je lepší. Na toto téma existuje mnoho článků a videí, zmínil bych možná pro zajímavost záznam setkání pražských testerů, kde se uskutečnil pomyslný souboj obou přístupů a dres vodopádu tehdy cvičně oblékl i Marcel Veselka od nás z Teseny. Více informací naleznete <a href="https://www.pro-test.info/protest-75/">zde</a>.</p>
+<p>Tesena poskytuje služby v oblasti testingu již řadu let a za tuto dobu jsem se svými kolegy zažil na mnoha projektech různé přístupy k testování v agilním světě a rád se o ně s vámi v následujících řádcích podělím. V obecné rovině bych je mohl rozdělit do 3 částí, které si v dalších kapitolách postupně popíšeme. Jedná se o personální přístup, technologický přístup a o přístup k plánování. V tomto čánku se zaměříme také na:</p>
+<ul>
+<li>Testování v agilním prostředí</li>
+<li>Principy agilního vývoje</li>
+<li>Definice vymezených rolí dle SCRUM metodiky</li>
+<li>Povahu jednotlivých typů ceremonií</li>
+<li>Přínos agilního vývoje pro testování</li>
+<li>Možné komplikace a jejich řešení</li>
+</ul>
+<h2 id="par-slov-obecne-o-agilnim-vyvoji">Pár slov obecně o agilním vývoji</h2>
+<p>Ještě než 3 body zmíněné v úvodu rozebereme detailně, rád bych se zmínil o základních principech agilního vývoje, konkrétně o Agilním manifestu.</p>
+<h3 id="zakladni-principy">Základní principy</h3>
+<p>Mezi základní principy patří tyto body:</p>
+<ul>
+<li>Software je dodáván často a průběžně</li>
+<li>Jsou vítané změny, které pomůžou zákazníkovi</li>
+<li>Fungující software je přednější než rozsáhlá dokumentace</li>
+<li>Základní jednotkou jsou samoorganizující se týmy, které tvoří motivovaní členové</li>
+<li>Je věnována pozornost technické vyspělosti a dobrému designu na začátku procesu</li>
+<li>Spolupráce vývoje a byznysu po celou dobu produktu</li>
+</ul>
+<h3 id="role">Role</h3>
+<p>V agilní metodice SCRUM je definován seznam jasně vymezených rolí. V krátkosti je lze popsat takto:</p>
+<ul>
+<li><strong>Product Owner</strong> vlastní vyvíjený produkt. Zřetelně definuje vizi, priority, pořadí úkolů a byznys logiku. Je zodpovědný za backlog, pravidelně provádí prioritizaci, případně některé úkoly odstraňuje.</li>
+<li><strong>Scrum Master</strong> eliminuje problémy, tlumí konflikty, motivuje developery a stará se, aby měli klid na práci. Dále hlídá dodržování procesu a jeho nutné změny. Pomáhá s udržováním flow v nástrojích pro správu úkolů (např. JIRA). Spolupracuje s Product Ownerem na řešení formální stránky nových úkolů tak, aby obsahovaly veškeré náležitosti.</li>
+<li><strong>Development team</strong> (QA, UI, Devs) řeší jednotlivé úkoly a vyvíjí produkt. Zavazuje se dodat určité úkoly v daném sprintu. Optimálně by měl mít do 10 členů. U větších týmů se doporučuje rozdělení na menší celky. V ideálním světě se složení týmu může měnit v závislosti na povaze úkolů, které jsou plánovány na nejbližší sprinty.</li>
+<li><strong>Project Manager</strong>: Prodává/prezentuje výsledky týmu dále. Koordinuje práci více Product Ownerů.</li>
+</ul>
+<h3 id="ceremonie">Ceremonie</h3>
+<p>Uvedené role tvoří samoorganizující se tým (někde se používá termín „firma ve firmě“), který vyvíjí nějaký produkt v krátkých časových úsecích. Typicky se jedná o dvoutýdenní sprinty. Během sprintu se konají některé schůzky, kterým se v agilním světě říká ceremonie. Pravděpodobně jste se s nimi setkali. Patří sem:</p>
+<h4 id="denni-status-take-se-pouziva-stand-up">Denní status (také se používá stand-up)</h4>
+<ul>
+<li>Účastní se ho vývojový tým, Scrum Master a volitelně i produktový vlastník</li>
+<li>Bývá nejčastěji ráno, než všichni začnou pracovat</li>
+<li>Neměl by trvat déle než 15 minut, v závislosti na velikosti týmu</li>
+<li>Každý z členů by měl ostatním sdělit, co za předchozí den dokončil, na čem bude dělat dnes, zda předpokládá, že to dokončí, a také, zda má nějaké překážky a případně kdo mu s tím může pomoci</li>
+<li>Často se volí varianta, kdy všichni stojí např. u TV v kanceláři, kde se zobrazuje board daného sprintu. Oproti pohodlnému sezení v zasedacích místnostech to tým alespoň nutí se tolik nerozpovídat. Někde jdou do extrémů a člověk, který mluví třeba i zároveň provádí různé cviky.</li>
+<li>Některé firmy zavedou pouze tyto ranní statusy a považují to za známku agilního vývoje.</li>
+</ul>
+<h4 id="grooming-ve-volnem-prekladu-odblesovani">Grooming (ve volném překladu „odblešování“)</h4>
+<ul>
+<li>Účastní se ho Product Owner a vývojový tým
+    Nemá pevné místo v rámci sprintu, tato schůzka se vytváří většinou v okamžiku, když je dostatek nových úkolů k ohodnocení</li>
+<li>Délka schůzky je v přímé úměře k množství a velikosti úkolů. Většinou trvá 1-3 hodiny.</li>
+<li>Hodnotí se náročnost vybraných úkolů z backlogu (ideálně nějaká ucelená množina)</li>
+<li>Product owner celý úkol nejprve představí a detailně popíše, co od toho očekává za výsledky. Pokud to ještě není, doplní se k úkolu akceptační kritéria a další informace.</li>
+<li>Vývojový tým o tom diskutuje, aby odhalili případné komplikace, nutné spolupráce jiných týmů nebo nutnost zásahu do dalších systémů.
+    Nakonec se ohodnotí náročnost daného úkolu. Zde záleží na tom, jak si to daný tým nastaví. Někde používají tzv. člověkodny (MDs), jinde story pointy (1, 2,3, 5, 8, 13...) nebo třeba velikosti triček (XS, S, M, L, XL).
+    Výsledkem je předpřipravený backlog, na kterém se v příštím sprintu dá začít vyvíjet.</li>
+</ul>
+<h4 id="retrospektiva">Retrospektiva</h4>
+<ul>
+<li>Účastní se celý tým, včetně Scrum Mastera, který by tuto schůzku měl moderovat, což je zvláště zde důležité</li>
+<li>Probíhá typicky v poslední den sprintu, nebo na začátku následujícího sprintu</li>
+<li>Typicky trvá 1-2 hodiny podle velikosti týmu</li>
+<li>Každý z účastníků zhodnotí, co se týmu jako celku povedlo, nepovedlo a co by chtěl zlepšit</li>
+<li>Všechny tyto nápady se lepí/píšou na tabuli (případně i v elektronické verzi, pokud je část týmu na home office)</li>
+<li>Následně každý dostane 3 body a oboduje, který nápad považuje za nejdůležitější nebo nejzávažnější</li>
+<li>Následně celý tým diskutuje o těch nápadech, které dostaly nejvíce bodů</li>
+<li>Výsledkem by mělo být nějaké řešení, nebo seznam úkolů, které jsou přiřazené konkrétním lidem</li>
+<li>Při další retrospektivě se hodnotí plnění těchto úkolů</li>
+<li>Retrospektiva by měla být v maximální možné míře konstruktivní a směřovat ke zlepšování týmu jako celku</li>
+</ul>
+<h4 id="planning">Planning</h4>
+<ul>
+<li>Účast Product Ownera není povinná</li>
+<li>Probíhá v závěru sprintu, často poslední den a je s retrospektivou spojen do jednoho bloku</li>
+<li>Vývojový tým si ze seřazeného a ohodnoceného backlogu vybírá úkoly, které se zaváže dodat v následujícím sprintu</li>
+<li>Většinou se vychází z předchozí průměrné rychlosti. Do výpočtu se zahrnou i plánované dovolené, svátky apod.</li>
+<li>Úkoly se vybírají z backlogu shora dolů, pořadí určuje Product Owner a tím ovlivňuje, co požaduje dodat</li>
+<li>Na této schůzce se také zavírá stávající sprint. Neuzavřené úkoly přepadávají do dalšího sprintu a tým si je doplní novými úkoly</li>
+<li>Pokud je vše připraveno, tato schůzka nemusí přesáhnout půl hodiny</li>
+<li>Součástí je i definování cílů následujícího sprintu</li>
+<li>Tyto cíle jsou pak vždy připomínány na denních statusových schůzkách a tým si tím připomíná, zda je schopen cíle naplnit</li>
+</ul>
+<h4 id="sprint-review-nekdy-tez-demo">Sprint review (někdy též demo)</h4>
+<ul>
+<li>Kromě týmu by se měli zúčastnit všichni, kterým tým dodal nějaké změny nebo nové funkce (stakeholdeři)</li>
+<li>Schůzka bývá na konci sprintu</li>
+<li>Tým se domluví, jestli se v prezentování budou členové střídat, nebo vše odprezentuje pouze jeden člověk</li>
+<li>Tým prezentuje pouze věci, které zvládnul dokončit/uzavřít. Je vhodné, když se tým před schůzkou krátce sejde a definuje si, co vše se bude prezentovat.</li>
+<li>Neprezentují se interní úkoly, například refaktoring, práce na technickém dluhu apod.</li>
+<li>Vždy by mělo zaznít, která funkce se vyvinula/opravila, proč se to dělalo a komu to přinese užitek</li>
+<li>Pokud lze, doporučuje se prezentaci nahrávat a následně archivovat</li>
+<li>Na konci schůzky je prostor pro otázky stakeholderů</li>
+</ul>
+<h2 id="co-prinesl-agilni-vyvoj-pro-testing">Co přinesl agilní vývoj pro testing?</h2>
+<p>Dříve probíhal vývoj jinak, než je běžné dnes. Předně release probíhal jen několikrát ročně. Všechny fáze byly načasované, tedy ze začátku se ze zadání vytvářela analýza celého řešení, včetně všech dopadů. Začala se připravovat dokumentace a současně i tým testerů si dával dohromady testovací případy, které bude nutné připravit. Teprve v okamžiku, kdy vývojáři aplikaci dokončovali, začali všichni testeři testovat a reportovat chyby. Jednotlivé role zde byly zastoupeny jako celé týmy lidí, to znamená, že například i testování provádělo vždy více lidí současně a měli nad sebou test manažera, který je řídil, rozděloval práci a komunikoval s jinými týmy.</p>
+<p>Přechodem na agilní vývoj se vše změnilo. Čas od zadání po release hotové funkce se řádově zkrátil. Na produkci se nasazuje i několikrát týdně po malých částech a nelze čekat na týdenní regresní manuální testování. Z toho plyne i větší snaha a motivace část testů <strong>automatizovat</strong> a ideálně i zařadit v <strong>CI/CD</strong> do procesu nasazování. Důležité je, že už přestaly existovat dedikované týmy vývojářů, testerů a analytiků. Vznikly samostatné týmy (firmy ve firmě), které měly typicky 3-6 vývojářů, jednoho analytika a jednoho až dva testery.  Týmy převzaly odpovědnost za své části aplikace, a ne jako dříve, za konkrétní fázi vývoje.</p>
+<p>Upustilo se od rozsáhlých dokumentací a analýz. Produktový vlastník přišel s nápadem, co by v aplikaci chtěl naprogramovat. Analytik zjistil možné dopady do jiných aplikací, potřebná datová pole, která se posílají na backend, případně další informace nutné pro vývoj. Při groomingu už toto všechno je pak známo a je to součástí ticketu, ve kterém je zadání. Vývojáři si k úkolu přidají svoje informace, a i tester musí znát vše potřebné, aby to pak mohl co nejlépe otestovat. Samotné úkoly by měly být rozsahem velké maximálně na práci přes celý sprint. Pokud by to bylo náročnější, je nutné úkol rozdělit na menší úseky. Doporučuje se také celý task (nebo story) rozdělit na subtasky obsahující malé samostatné dílčí úkoly.</p>
+<h3 id="problem-c-1-planovani">Problém č. 1 – Plánování</h3>
+<p>Jak již bylo řečeno, už při plánování/groomingu bylo nutné myslet na všechny fáze a součástí pracnosti daného úkoly byl vždy i testing. Tester se musel na groomingu aktivně ptát, aby zjistil možné budoucí komplikace, které by například znemožnily dokončit celou funkcionalitu během sprintu. Na projektech se nám velmi osvědčilo si do úkolu přidávat testerské subtasky, např. pro přípravu testovacích dat/uživatelů, přípravu TC, opravu automatizovaných testů a pak i samotné manuální ověření. Část z toho bylo možné připravovat už dopředu a v okamžiku předání tasku od vývojářů na testing už byla část připravená.</p>
+<p>Při samotném plánování byl problém s určováním náročnosti úkolu, respektive toho, jak bodovat. Na některých projektech se testing hodnotil zvlášť a pak se přičítal k hodnocení od vývojářů, nebo byla obě čísla společná. Za mě ale nejlépe fungoval přístup, kdy jsem hodnotil spolu s vývojáři. Představoval jsem si ten úkol komplexně, po čase jsme si vytvořili i vzorové Story pro 1, 2, 3, 5… bodů. Takže i tester pak dokázal náročnost určit podobně jako vývojář. Pouze v případě, že jsem věděl, že testování bude obsahovat velké množství práce, tak jsme v týmu výsledné číslo zvýšili například z 5 na 8, aby to reflektovalo náročnost testování. Na některých projektech se zaváděl i paralelní sprint a backlog pro testing, ale většinou se to neujalo, protože celý proces byl pak značně nepřehledný.</p>
+<h3 id="problem-c-2-slozeni-tymu">Problém č. 2 – Složení týmu</h3>
+<p>V agilním světě fungují menší, samoorganizující se týmy. S tím souvisí i to, že na malé množství vývojářů se počítá většinou s jedním testerem. Neexistuje tu velký tým testerů řízený Test Managerem, který by na úkolech spolupracoval. První, co každého napadne, je určitě menší zastupitelnost. V případě dovolené nebo nemoci musí za testera někdo zaskočit. Většinou to je analytik nebo někdo z vývojářů. Je proto nutné, aby si tester udržoval kvalitní dokumentaci a např. přehled testovacích dat, který můžou ostatní členové týmu v případě jeho nepřítomnosti použít. S těmito daty a postupy pro testování aplikace je třeba celý tým pravidelně seznamovat.</p>
+<p>Tester, pokud je takto sám v týmu, musí být tím, kdo by měl dovnitř týmu předávat základní myšlenky ohledně testingu. Je třeba i nastavit procesy během sprintu tak, aby se předešlo přetížení testera například na konci sprintu. Toho se dá docílit rozdělením větších úkolů na menší samostatné celky, kdy je tester může odbavovat postupně. Pokud je vhodné k nějaké nové funkci doplnit i automatizovaný test, lze jeho implementaci odložit na začátek následujícího sprintu, kdy bývá pro testing obecně méně práce a je tam pro toto prostor.</p>
+<p>Pokud je dopředu známo, že tester třeba 2-3 týdny bude na dovolené, tak se vyplatí domluvit na planningu předem a do sprintu naplánovat úkoly, kde se nepředpokládá rozsáhlé testování a ověřit si, jak to zvládnou vývojáři mezi sebou. Do daného úkolu se do poznámek může připsat checklist případů, které tester doporučuje projít, aby se na nic nezapomnělo.</p>
+<h3 id="problem-c3-technicke-pristupy">Problém č.3 – Technické přístupy</h3>
+<p>S předchozím souvisí i toto. Na většině agilních projektů je snaha řešit testy automatizovaně. Na to existuje velké množství nástrojů a frameworku prakticky ve všech používaných programovacích jazycích. Jako testeři bychom si tedy vybírali podle účelu a podle typu aplikací, které budeme chtít testovat. Bude tedy rozhodovat primárně to, zda v daném nástroji chceme řešit testy pouze API, nebo kombinovaně s webovou aplikací, jestli se bude jednat pouze o funkční testy, nebo bychom rádi i testovali performance apod.</p>
+<p>Na mnoha projektech, kde jsme spolu s kolegy z Teseny byli, jsme museli při výběru nástroje přihlédnout k tomu, co používali vývojáři a také v čem programovali. Je totiž důležité počítat s tím, že automatizaci budou řešit prakticky všichni v týmu, protože pokud jediný tester v týmu onemocní nebo je na dovolené, tak je nutné, aby existovala jeho zastupitelnost. Pokud tedy v týmu jsou pouze PHP vývojáři, můžeme s úspěchem použít framework Codeception právě v tomto jazyku, případně čisté PHP s knihovnami pro Selenium. Podobně se můžeme přizpůsobit Java programátorům, stejně tak i pro Javascript a Python existuje velké množství možností.</p>
+<p>Z vlastní zkušenosti mohu říct, že vývojáři často nemají představu o funkci automatizovaných testů, nebo jen mlhavě tuší. Pokud pro ně připravíme hodinovou ukázku, včetně rozebrání zdrojového kódu, živého spuštění testů a kontroly jejich výsledků, ve většině případů se pro to nadchnou a sami navrhují, že by s psaním testů pomáhali. Má to několik výhod. Předně se jedinému testerovi částečně uvolní ruce, protože bude vývojář schopný si základní testy na vyvíjenou funkci napsat sám. Další scénáře, předně ty negativní, pak stále zůstanou na testerovi. On by měl znát všechny možné scénáře, které můžou nastat a pokud to lze, aby bylo vše pokryto testy. Další výhoda je to, že si tester a vývojář vzájemně můžou dělat revize kódu automatizovaných testů. Tester má tak možnost zlepšit svoji kvalitu kódu, vyvarovat se běžných nešvarů a obecně psát svůj kód čitelnějším způsobem. Pokud už takto vývojáři i testeři zvládají spolupracovat, většinou sami vývojáři začnou navrhovat, jak např. webovou aplikaci upravit, aby byla snáze automatizovatelná. Může se jednat o snahu doplnit ID k elementům na stránce, doplnit Javascript, který dokáže informovat, že je stránka kompletně načtená, nebo pomůžou zpřístupnit pomocné systémy na pozadí pro automatizované testy. Testy pak můžou využívat např. číselník textů jednotlivých elementů v různých jazycích, zakládat si data/uživatele pomocí API na backendu, nebo si některé výsledky ověřovat v DB apod. Testy se pak stanou komplexnějšími a do jisté míry i stabilnějšími.</p>
+<p>Nyní tedy uvažujeme situaci, kdy vývojáři pomáhají s psaním automatizovaných testů. Stále je ale tester ten člověk, který by měl kontrolovat jejich běh, typicky výsledek nočního spouštění a v případě chyb analyzovat, co se stalo a jestli je třeba opravit testy, nebo zadat novou chybu. Prvním problémem je místo, kde testy běží. Ve většině případů se jedná o Jenkins (či jiný CI/CD nástroj), který je samostatnou instancí čistě jen pro pouštění testů a na svých nodech má nainstalované potřebné knihovny. Tester je samozřejmě zvyklý report kontrolovat, ale pro vývojáře to může být jen dalším ze systémů, kam musí chodit a mít tam přístup. Řešením je zde zakomponovat spouštění testů na stejné místo, kde se buildí nebo nasazují aplikace na testovací prostředí. Nasazení nové verze aplikace pak na pozadí může rovnou spustit testy. Nebo z našich testů vyčlenit sadu smoke testů, které budou trvat krátký časový úsek a zařadit jejich spouštění přímo do pipeline nasazování.</p>
+<p>Stejně jako způsob samotného spouštění testů je neméně důležitý i formát výsledku. Nástroje pro automatizaci většinou nabízí vlastní způsob reprezentace výsledku běhu, každopádně ne vždy takový formát musí vyhovovat a je třeba přemýšlet i o tom, jak výsledky co nejvíce přiblížit ostatním členům v týmu, aby měli okamžitý přehled, co se s aplikací děje a co přestalo fungovat. Nedávno jsem na toto téma publikoval článek.</p>
+<h1 id="zaver">Závěr</h1>
+<p>Co říci závěrem? Agilní přístup ve vývoji SW neznamenal jen zrychlení samotného vývoje, ale změnilo se i celkově testování. Testují se malé změny v aplikaci, současně je třeba testovat i regresně, zda změna nezpůsobuje chybu v jiné části. Z toho důvodu se klade větší důraz na automatizaci a CI/CD. Rozdíly v týmu mezi vývojáři a testery se zmenšují. Každý má stále svou oblast působnosti a nový přístup současně umožňuje vzájemnou spolupráci, revize a výpomoc. Pro testera to znamená nutnost přizpůsobení se, protože na testing bývá v týmu většinou sám. Často se tak zaměří na výběr takových nástrojů, které budou vyhovovat i vývojářům. Se všemi výzvami jsme se na projektech v Teseně úspěšně poprali. Pokud byste rádi věděli detaily, určitě nám napište a můžeme vše probrat u kávy.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
