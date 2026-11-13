@@ -1,8 +1,8 @@
-site_name: TomasHak Site
-site_description: an example blog set up following the tutorial
+site_name: Tomas Hak - About Me
+site_description: Information about my projects and work - Tomas Hak
+site_author: Tomas Hak
 site_url: https://mydomain.org/mysite
 theme:
   name: material  
 plugins:
   - search
-  - blog
