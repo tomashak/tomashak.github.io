@@ -4,9 +4,10 @@ site_author: Tomas Hak
 site_url: https://mydomain.org/mysite
 theme:
   name: material
+  hide:
+    - navigation
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - content.code.copy
   font:

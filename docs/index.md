@@ -1,5 +1,5 @@
 # About Me
-<img src="img/profil.jpg" alt="Profile Image" width="150px" style="float: left; margin-right: 20px;" />
+<img class="profile-photo" src="img/profil.jpg" alt="Profile Image" width="150px" />
 
 ## Ing. Tomáš Hák        
 Test automation specialist bez bázně a hany. Bud Spencer českého testingu. Když jsem byl malý, byl jsem namyšlený, ale teď už nemám chybu. ;-) Fight till the last bug. 
