@@ -10,16 +10,9 @@ Test automation specialist bez bázně a hany. Bud Spencer českého testingu. K
 - **LinkedIn:** [linkedin.com/in/haktom](https://www.linkedin.com/in/haktom)
 - **YouTube:** [youtube.com/@tesena](https://www.youtube.com/@tesena)        
 
-## Links to my work
+## My Work
 
-- [GitHub](https://github.com/tomashak)
-- [Medium Articles](https://medium.com/@tomas.hak)
-- Youtube webinars
-    - [![Webinar Thumbnail](https://img.youtube.com/vi/yLltQ6HO0So/0.jpg)](https://www.youtube.com/watch?v=yLltQ6HO0So)
-    - [![Webinar Thumbnail](https://img.youtube.com/vi/yFPjTo1xQHE/0.jpg)](https://www.youtube.com/watch?v=yFPjTo1xQHE)
-    - [![Webinar Thumbnail](https://img.youtube.com/vi/7dm_YkcD-M0/0.jpg)](https://www.youtube.com/watch?v=7dm_YkcD-M0)
-    - [![Webinar Thumbnail](https://img.youtube.com/vi/9lex9P-6430/0.jpg)](https://www.youtube.com/watch?v=9lex9P-6430)
-    - [![Webinar Thumbnail](https://img.youtube.com/vi/DCPCfmRxP0c/0.jpg)](https://www.youtube.com/watch?v=DCPCfmRxP0c)
+See my work and links on the separate page: [My Work](MyWork.md).
         
         
         

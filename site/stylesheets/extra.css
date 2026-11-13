@@ -1,0 +1,60 @@
+:root {
+  --md-default-bg-color: #0b1020;
+  --md-default-fg-color: #e5e7eb;
+  --md-default-fg-color--light: #b6c0d0;
+
+  --md-primary-fg-color: #111827;
+  --md-primary-fg-color--light: #1f2937;
+  --md-primary-fg-color--dark: #020817;
+
+  --md-accent-fg-color: #5eead4;
+  --md-accent-fg-color--transparent: rgba(94, 234, 212, 0.1);
+
+  --md-code-bg-color: #111827;
+  --md-code-fg-color: #d1fae5;
+}
+
+.md-typeset a {
+  color: #67e8f9;
+}
+
+.md-typeset a:hover {
+  color: #5eead4;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #e2e8f0;
+}
+
+.md-typeset code {
+  background-color: #111827;
+  color: #7dd3fc;
+}
+
+.md-typeset pre > code {
+  background-color: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.5rem;
+}
+
+.md-header {
+  background: rgba(15, 23, 42, 0.92);
+  border-bottom: 1px solid rgba(94, 234, 212, 0.2);
+}
+
+.md-tabs {
+  background: rgba(15, 23, 42, 0.98);
+}
+
+.md-sidebar {
+  background-color: #0f172a;
+}
+
+.md-content {
+  background: #0b1020;
+}
